@@ -1,11 +1,22 @@
+//default styles for entire app
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: Open sans-serif, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: Open sans-serif, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+//Applying this rule to remove default styles on all anchor tags in d app
+a {
+	text-decoration: none;
+	color: black;
+}
+
+// Path: src\index.scss

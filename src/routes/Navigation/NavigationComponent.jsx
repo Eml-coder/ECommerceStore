@@ -1,5 +1,8 @@
 import { Fragment } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+// import { ReactComponent as CrwnLogo } from '../../assets/crownLogo.svg';
+import { ReactComponent as CrwnLogo } from '../../assets/logo.svg';
+import './NavigationStyles.scss';
 
 
 const Navigation = () => {
@@ -10,7 +13,7 @@ const Navigation = () => {
 				
 					className='logo-container'
 					to='/'>
-					<div>Logo</div>
+				<CrwnLogo className='logo'/>
 				</Link>
 
 				<div className='nav-links-container'>
@@ -30,21 +33,14 @@ const Navigation = () => {
 
 export default Navigation;
 
+// Path: src\routes\Navigation\NavigationStyles.scss
+
 
 
 
   
-// 	const Navigation = () => {
-// 		return (
-// 			<div>
-// 				<div>
-// 					<h1>hi from navigation sample</h1>
-// 				</div>
-// 				<Outlet />
-// 			</div>
-// 		);
-// 	};
+
   
 
 
-// export default Navigation;
+
