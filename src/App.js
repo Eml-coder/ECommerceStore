@@ -3,6 +3,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home/HomeComponent';
 import Navigation from './routes/Navigation/NavigationComponent';
+import SignIn from './routes/Sign-In/SignInComponent';
 
 const Shop = () => {
 	return <h1>Shop page</h1>;
@@ -16,16 +17,18 @@ const App = () => {
 				element={<Navigation />}>
 				<Route
 					index
-		
 					element={<Home />}
 				/>
 				<Route
 					path='shop'
 					element={<Shop />}
 				/>
+				<Route
+					path='sign-in'
+					element={<SignIn />}
+				/>
 			</Route>
 		</Routes>
-		
 	);
 };
 /* Here is the explanation for the nested Routing code above:
