@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import FormInput from '../FormInput/FormInputComponent';
 import Button from '../Button/ButtonComponent';
 import './SignUpFormStyles.scss';
@@ -7,6 +7,8 @@ import {
 	createAuthUserWithEmailAndPassword,
 	createUserDocumentFromAuth,
 } from '../../utils/Firebase/FirebaseUtils';
+
+import { UserContext } from '../../contexts/UserContext';
 
 // grouping the form fields into a single object(becos they are related to each other and use same logic) instead of individual states
 const defaultFormFields = {
@@ -19,7 +21,8 @@ const defaultFormFields = {
 const SignUpForm = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { displayName, email, password, confirmPassword } = formFields;
-	console.log(formFields);
+
+const { setCurrentUser } = useContext(UserContext);
 
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields);
@@ -33,7 +36,7 @@ const SignUpForm = () => {
 		}
 		try {
 			const { user } = await createAuthUserWithEmailAndPassword(email, password);
-			//setFormFields(defaultFormFields);
+			setCurrentUser(user);
 			await createUserDocumentFromAuth(user, { displayName });
 			resetFormFields();
 		} catch (error) {

@@ -1,25 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// used to store the current location in the browsers address bar(https://reactrouter.com/en/main/router-components/browser-router)
-import { BrowserRouter } from 'react-router-dom';
 
-import './index.scss';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { UserProvider } from './contexts/UserContext';
+import './index.scss';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <>
 		{/* using BrowserRouter to wrap our entire application so we can make use of react router tools to route smoothly*/}
 		<BrowserRouter>
+		<UserProvider>
 			<App />
+		</UserProvider>
 		</BrowserRouter>
 	</>
 
 );
 
-//removing <React.StrictMode> because my App keeps re rendering.
-{/* <React.StrictMode>
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>
-</React.StrictMode>; */}
