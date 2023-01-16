@@ -4,16 +4,14 @@ import { Outlet, Link } from 'react-router-dom';
 import { ReactComponent as CrwnLogo } from '../../assets/logo.svg';
 import './NavigationStyles.scss';
 
-
 const Navigation = () => {
 	return (
 		<Fragment>
 			<div className='navigation'>
 				<Link
-				
 					className='logo-container'
 					to='/'>
-				<CrwnLogo className='logo'/>
+					<CrwnLogo className='logo' />
 				</Link>
 
 				<div className='nav-links-container'>
@@ -25,7 +23,7 @@ const Navigation = () => {
 
 					<Link
 						className='nav-link'
-						to='/sign-in'>
+						to='/auth'>
 						SIGN IN
 					</Link>
 				</div>
@@ -35,18 +33,6 @@ const Navigation = () => {
 	);
 };
 
-
-
 export default Navigation;
 
 // Path: src\routes\Navigation\NavigationStyles.scss
-
-
-
-
-  
-
-  
-
-
-
