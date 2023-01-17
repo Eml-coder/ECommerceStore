@@ -19,10 +19,10 @@ import './CartIconStyles.scss';
 // };
 
 const CartIcon = () => {
-	const { isCartOpen, setIsCartOpen } = useContext(CartContext); // 1
-	const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen); // 2
+	const { isCartOpen, setIsCartOpen } = useContext(CartContext); 
+	const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen); 
 
-	console.log(setIsCartOpen);
+
 
 	return (
 		<div
