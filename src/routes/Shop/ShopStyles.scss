@@ -1,8 +1,9 @@
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    color: rgb(46, 45, 45);
-    text-align: center;
-    font-family: cursive, sans-serif;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 10px;
+	row-gap: 10px;
+	color: rgb(46, 45, 45);
+	text-align: center;
+	font-family: cursive, sans-serif;
 }
