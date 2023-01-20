@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import FormInput from '../FormInput/FormInputComponent';
 import Button from '../Button/ButtonComponent';
-import './SignUpFormStyles.scss';
+import { SignUpContainer } from './SignUpFormStyles.js';
 
 import {
 	createAuthUserWithEmailAndPassword,
 	createUserDocumentFromAuth,
 } from '../../utils/Firebase/FirebaseUtils';
-
-
 
 // grouping the form fields into a single object(becos they are related to each other and use same logic) instead of individual states
 const defaultFormFields = {
@@ -53,7 +51,7 @@ const SignUpForm = () => {
 	};
 
 	return (
-		<div className='sign-up-container'>
+		<SignUpContainer>
 			<h2>Dont have an account?</h2>
 			<span>Sign Up With Your Email and Password</span>
 			<form onSubmit={handleSubmit}>
@@ -99,7 +97,7 @@ const SignUpForm = () => {
 					Sign Up
 				</Button>
 			</form>
-		</div>
+		</SignUpContainer>
 	);
 };
 
